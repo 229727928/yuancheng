@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="images/normalize" type="text/css" /> -->
+    <style>
+        .clearfix:before,
+        .clearfix:after {
+            content: "";
+            display: table;
+        }
+        
+        .clearfix:after {
+            clear: both;
+        }
+        
+        .clearfix {
+            *zoom: 1;
+        }
+        /*.clearfix:after {
+		content: "";
+		display: block;
+		height: 0;
+		visibility: hidden;
+		clear: both;
+	}
+	.clearfix {
+		*zoom:1;
+	}*/
+        
+        body {
+            min-width: 320px;
+            max-width: 980px;
+            margin: 0 auto;
+            /*padding: 5px;*/
+            background-color: #ccc;
+            /*box-sizing: border-box;*/
+        }
+        html {
+            font-size: 14px;
+        }
+      div {
+        font-size: 12px;
+        width: 15rem;
+        height: 15rem;
+        background-color: purple;
+      }
+      p {
+        width: 10rem;
+        height: 10rem;
+        background-color: pink;
+      }
+      @media screen and (max-width: 800px) {
+        body {
+            background-color: red;
+        }
+      }
+      @media screen and (max-width: 700px) {
+        body {
+            background-color: blue;
+        }
+      }
+    </style>
+</head>
+
+<body>
+
+ <div>
+    <p></p>
+ </div>
+</body>
+
+</html>

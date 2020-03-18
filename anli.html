@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        
+        html {
+            font-size: 12px;
+        }
+        
+        ul,
+        ol {
+            list-style: none;
+        }
+        
+        .kuang {
+            width: 286px;
+            margin: 0 auto 0;
+            padding-left: 10px;
+            padding-right: 10px;
+            border: .5px #000 solid;
+        }
+        
+        .kuang table {}
+        
+        .kuang table tr td {
+            width: 50%;
+            /* text-align: center; */
+            height: 30px;
+            line-height: 30px;
+            /* padding-left: 10px;
+            padding-right: 10px; */
+        }
+        
+        .kuang table tr td.per50 {
+            width: 50%;
+        }
+        
+        label {
+            margin-left: 10px;
+            padding-right: 5px;
+        }
+        
+        .kuang table tr td.docubleline {
+            width: 100%;
+            height: 5px;
+            margin: 0 auto 0;
+            border: solid #eee .5px;
+            border-left: none;
+            border-right: none;
+        }
+        
+        .kuang table tr td.singline {
+            width: 100%;
+            margin: 0 auto 0;
+            border-top: solid #eee .5px;
+            height: 2px;
+        }
+        
+        .title {
+            font-size: 16px;
+            font-weight: bold;
+        }
+        
+        .left {
+            text-align: left;
+        }
+        
+        .center {
+            text-align: center;
+        }
+        
+        .bold {
+            font-weight: bold;
+        }
+        
+        .flex {
+            display: flex;
+        }
+        
+        .flex span {
+            flex: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="kuang">
+        <table border="0" width=100% cellpadding="0" cellspacing="0">
+            <tr>
+                <td colspan="3" class="center"><label for="">打印日期: </label>2020年02月12目 19时21分33抄 </td>
+            </tr>
+            <tr>
+                <td colspan="3" class="title center"><label for="">检测站名称</label>缴费单 </td>
+            </tr>
+            <tr>
+                <td><label for="">车牌号:</label>数量</td>
+                <td><label for="">号牌种类:</label>金额</td>
+
+            </tr>
+            <tr>
+                <td colspan="3" class="docubleline">
+
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3" class="bold">
+                    <label for="">缴费项目明细</label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <label for=""> [编号]
+                        <服务项目名称>(含
+                            <包含项>)</label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+
+                    <div class="flex">
+                        <span><label for="">数量:</label>数量</span>
+                        <span><label for="">单价:</label>金额</span>
+                        <span><label for="">实收:</label>金额</span>
+                    </div>
+                </td>
+                <!-- <td></td>
+                <td></td>
+                <td></td> -->
+            </tr>
+            <tr>
+                <td colspan="3" class="singline">
+
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3" class="bold">
+
+                    <label for="">合计</label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    <label for="">应收费项:</label>收费项
+                </td>
+            </tr>
+            <tr>
+                <td class="per50"><label for="">应收金额:</label>数量</td>
+                <td class="per50"><label for="">项目数量:</label>金额</td>
+
+            </tr>
+            <tr>
+                <td class="per50"><label for="">折扣金额:</label>数量</td>
+                <td class="per50"><label for="">优惠数量:</label>金额</td>
+
+            </tr>
+            <tr>
+                <td class="per50"><label for="">实收金额:</label>数量</td>
+                <td class="per50"><label for="">收款方式:</label>收款方式</td>
+
+            </tr>
+            <tr>
+                <td colspan="3" class="singline">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3"><label for="">流水号:</label>流水号</td>
+            </tr>
+            <tr>
+                <td colspan="3"><label for="">缴费时间:</label>时间</td>
+            </tr>
+            <tr>
+                <td colspan="3"><label for="">收银员:</label>姓名</td>
+            </tr>
+            <tr>
+                <td colspan="3"><label for="">备注:</label>备注</td>
+            </tr>
+            <tr>
+                <td colspan="3" class="docubleline">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3"><label for="">联系电话:</label>检测站联系电话</td>
+            </tr>
+            <tr>
+                <td colspan="3"><label for="">检测站地址:</label>检测站地址</td>
+            </tr>
+            <tr>
+                <td colspan="3" class="center"><label for="">温馨提示:</label>以上所有金额均以元为单位</td>
+            </tr>
+        </table>
+    </div>
+
+</body>
+
+</html>

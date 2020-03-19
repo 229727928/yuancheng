@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        ul {
+            list-style: none;
+        }
+        
+        a {
+            text-decoration: none;
+        }
+        
+        .bg {
+            background-color: pink;
+        }
+        
+        li button {
+            background-color: purple;
+            margin-left: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <textarea name="" id="" cols="30" rows="10"></textarea>
+    <button>提交</button>
+    <ul>
+
+    </ul>
+    <script>
+        var txt = document.querySelector('textarea');
+        var button = document.querySelector('button');
+        var ul = document.querySelector('ul');
+        button.onclick = function() {
+            if (txt.value === '') {
+                alert('请输入内容');
+                return;
+            }
+            var li = document.createElement('li');
+            li.setAttribute('class', 'bg');
+            li.innerHTML = txt.value + "<a href='javascript:;'>链接</a>";
+
+            var btnDel = document.createElement('button');
+            btnDel.setAttribute('id', 'del');
+            btnDel.value = '删除';
+            btnDel.innerHTML = '删除';
+            btnDel.onclick = function() {
+                ul.removeChild(this.parentNode);
+            }
+            li.appendChild(btnDel);
+
+            ul.insertBefore(li, ul.children[0]);
+        }
+    </script>
+</body>
+
+</html>

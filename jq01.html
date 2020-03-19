@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-size: 12px;
+        }
+        
+        ul {
+            list-style: none;
+        }
+        
+        a {
+            text-decoration: none;
+        }
+        
+        .father {
+            position: relative;
+            margin: 30px;
+            width: 300px;
+            height: 300px;
+            background-color: pink;
+        }
+        
+        .son {
+            position: absolute;
+            left: 0;
+            top: 0;
+            margin: 10px;
+            width: 200px;
+            height: 200px;
+            background-color: purple;
+        }
+        
+        body span {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+    </style>
+    <script src="./js/jquery-3.4.1.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(window).scroll(function(e) {
+                // $(this).scrollTop(1000)
+
+            });
+
+            // $(document).scroll(function(e) {
+            //     console.log($(this).scrollTop());
+
+            // });
+            $(".back").on("click", function(e) {
+                // $(document).scrollTop(0);
+                $("html,body").animate({
+                    scrollTop: 0
+                })
+            })
+        });
+    </script>
+</head>
+
+<body>
+    <span class="back">
+        返回顶部
+    </span>
+    <div class="father">
+        <div class="son"></div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+</body>
+
+</html>

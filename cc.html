@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        window.onload = function() {
+            var banner = document.querySelector('.banner');
+
+            var bannerTop = banner.offsetTop;
+            var backtop = document.querySelector('.backtop');
+
+            document.addEventListener('scroll', function(e) {
+                var header = document.querySelector('.header');
+                var budong = document.querySelector('.budong');
+                var backtop = document.querySelector('.backtop');
+                var scrollH = document.documentElement.scrollTop;
+                if (scrollH >= bannerTop) {
+                    budong.style.position = 'fixed';
+                    budong.style.top = 50 + 'px';
+                    header.style.position = 'fixed';
+                    header.style.top = 0 + 'px';
+                    backtop.style.display = 'block';
+                } else {
+                    budong.style.position = 'absolute';
+                    budong.style.top = 690 + 'px';
+                    header.style.position = 'static';
+                    header.style.height = 50 + 'px';
+                    backtop.style.display = 'none';
+                }
+
+            })
+            backtop.addEventListener('click', function() {
+                // alert(1)
+                // window.scroll(0, 0);
+                animate(window, 0);
+            });
+
+            function animate(obj, target, callback) {
+                if (obj.t) {
+                    clearInterval(obj.t);
+                }
+                obj.t = setInterval(() => {
+                    if (obj.pageYOffset == target) {
+                        clearInterval(obj.t);
+                        // if (callback) {
+                        //     callback();
+                        // }
+                        callback && callback();
+                    }
+                    var step = (target - obj.pageYOffset) / 10;
+                    step = step >= 0 ? Math.ceil(step) : Math.floor(step);
+                    // obj.style.Top = obj.pageYOffset + step + 'px';
+                    obj.scroll(0, obj.pageYOffset + step);
+                }, 15);
+            }
+        }
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        ul {
+            list-style: none;
+        }
+        
+        div {
+            width: 1200px;
+            margin: 10px auto 0px;
+        }
+        
+        .header {
+            margin-top: 0;
+            width: 100%;
+            height: 200px;
+            background-color: rgb(247, 216, 133);
+        }
+        
+        .header banner-cont {
+            width: 1200px;
+            margin: 0 auto 0;
+        }
+        
+        .banner {
+            height: 50px;
+            background-color: purple;
+        }
+        
+        .main {
+            background-color: lightpink;
+            height: 2000px;
+        }
+        
+        .budong {
+            position: absolute;
+            left: 50%;
+            top: 690px;
+            margin-left: 610px;
+            width: 80px;
+            height: 210px;
+            text-align: center;
+            background-color: lightsteelblue;
+        }
+        
+        .budong ul li {
+            height: 44px;
+            line-height: 44px;
+        }
+        
+        .backtop {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="banner-cont">头部</div>
+    </div>
+    <div class="banner" id="banner">
+
+        banner区域
+    </div>
+    <div class="main">主体部分</div>
+    <div class="budong">
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li class="top">
+                <!-- <a href="#banner" class="backtop">返回顶部</a> </li> -->
+                <a href="javascript:;" class="backtop">返回顶部</a> </li>
+
+        </ul>
+
+    </div>
+</body>
+
+</html>

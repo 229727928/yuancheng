@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        ul,
+        ol {
+            list-style: none;
+        }
+        
+        .print {
+            width: 800px;
+            display: flex;
+            border: 1px solid #eee;
+        }
+        
+        .print span {
+            width: 200px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            border-right: solid 1px #eee;
+        }
+        
+        .print ul {
+            display: flex;
+            flex: 1;
+        }
+        
+        .print ul li {
+            flex: 1;
+            text-align: center;
+            height: 50px;
+            line-height: 50px;
+        }
+        
+        .box {
+            margin-top: 50px;
+            margin-left: 50px;
+            display: flex;
+        }
+        
+        .btn {
+            width: 100px;
+            margin-left: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="print">
+            <span>当前使用打印机类型</span>
+            <ul>
+                <li> <input type="radio" name="print" id="print1"> <label for="print1">喷墨打印机</label></li>
+                <li><input type="radio" name="print" id="print2"><label for="print2">小票打印机</label></li>
+
+            </ul>
+
+        </div>
+        <button class="btn">保存</button>
+    </div>
+
+
+</body>
+
+</html>
